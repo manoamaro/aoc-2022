@@ -17,3 +17,11 @@ func MapToInt(in []string) []int {
 	}
 	return r
 }
+
+func Reverse[T any](input []T) []T {
+	r := input
+	for i, j := 0, len(r)-1; i < j; i, j = i+1, j-1 {
+		r[i], r[j] = r[j], r[i]
+	}
+	return r
+}
