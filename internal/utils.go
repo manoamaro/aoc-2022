@@ -9,6 +9,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+type Void struct{}
+
 func ReadInputFromCache(day int) string {
 	data, err := os.ReadFile(fmt.Sprintf(".cache/input_%d", day))
 	if err != nil {
