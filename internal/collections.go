@@ -1,6 +1,9 @@
 package internal
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 func SumInts(v []int) int {
 	r := 0
@@ -24,4 +27,12 @@ func Reverse[T any](input []T) []T {
 		r[i], r[j] = r[j], r[i]
 	}
 	return r
+}
+
+func PrintC[T any](input []T) {
+	fmt.Print("[")
+	for _, v := range input {
+		fmt.Printf("%v,", v)
+	}
+	fmt.Println("]")
 }

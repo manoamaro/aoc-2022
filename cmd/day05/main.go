@@ -63,9 +63,10 @@ func main() {
 
 }
 
+var regex = regexp.MustCompile(`(\[[A-Z]\])|(\s{4})`)
+
 func parseStack(input string) [][]string {
 	stacks := [][]string{}
-	regex := regexp.MustCompile(`(\[[A-Z]\])|(\s{4})`)
 
 	stacks_raw := strings.Split(input, "\n")
 
